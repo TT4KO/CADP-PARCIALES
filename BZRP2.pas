@@ -1,10 +1,14 @@
-{Se dispone de una estructura de datos con la informacion de las sesiones de bizarrap. De casa sesion se conoec: titulo, nombre del artista, 
+{Se dispone de una estructura de datos con la informacion de las sesiones de bizarrap. 
+De casa sesion se conoec: titulo, nombre del artista, 
 genero musical(1:trap latino, 2:reggaeton,
-3: urban, 4: electronica, 5: pop rap) año de estreno y cantidad de reproducciones en spotify. La informacion no posee un orden especifico.
+3: urban, 4: electronica, 5: pop rap) año de estreno y cantidad de reproducciones en spotify. 
+La informacion no posee un orden especifico.
 A) informar los dos codigos de gnero musical menor cantida de reproducciones en spotify
-B)generara una lista ordenada por año que contenga las sesiones del genero "trap latino" y "urban" cuya suma de los digitos de la cantidad de
+B)generara una lista ordenada por año que contenga las sesiones del genero "trap latino" y "urban" 
+cuya suma de los digitos de la cantidad de
 reproducciones sea multipolo de 5;
-C)realizar un modulo qu reciba la lista generada en el punto anterior e informe para cada año, la cantidad de sesiones realizada junto al total
+C)realizar un modulo qu reciba la lista generada en el punto anterior e informe para cada año, la cantidad 
+de sesiones realizada junto al total
 de reproducciones de spotify de esas
 sesiones}
 program djasi;
