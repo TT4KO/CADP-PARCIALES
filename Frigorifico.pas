@@ -1,5 +1,7 @@
-{realizar un modulo que cargue en una estructura de datos adecuada la informacion de las compras. De cada compra se conoce el monto abonado, el mes que se realizo la compra, 
-la cantida de kilos comprados y el nombre del frigorifico. Por cada frigorifico puede haber mas de una compra. La informacion de las comrpas debe quedar ordenada por nombre 
+{realizar un modulo que cargue en una estructura de datos adecuada la informacion de las compras. 
+De cada compra se conoce el monto abonado, el mes que se realizo la compra, 
+la cantida de kilos comprados y el nombre del frigorifico. Por cada frigorifico puede haber mas de una compra.
+La informacion de las comrpas debe quedar ordenada por nombre 
 de frigorifico. La lectura finaliza al ingresar la compra con 100 kilos de carne, que debe procesarce.
 
 A)los nombres de los frigorificos para los cuales el monto total facturado supero los 45000 pesos
