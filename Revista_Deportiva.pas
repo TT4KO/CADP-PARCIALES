@@ -1,13 +1,17 @@
-{Una revista deportiva dispone de informacion de los jugadores de futbol participantes de la liga profesional 2022. De cada jugador de conoce codigo de jugador, apellido y nombres,
-codigo de equipo[1..8], año de nacimiento y la calificacion obtenida para cada una de las 27 fechas del torneo ya finaliza. La calificacion es numerica de 0 a 10 doinde el valor 0 
+{Una revista deportiva dispone de informacion de los jugadores de futbol participantes de la liga profesional 2022.
+De cada jugador de conoce codigo de jugador, apellido y nombres,
+codigo de equipo[1..8], año de nacimiento y la calificacion obtenida para cada una de las 27 fechas del torneo ya finaliza. 
+La calificacion es numerica de 0 a 10 doinde el valor 0 
 significa que el jugador no ha participado de la fecha
 
 A)informar para cada equipo la cantidad de jugadores mayores a 35 años
 
-b)informar los codigos de los 2 jugadores con menor calificaion promedio en los partidos en los que participo. Solo deben considerarse los jugadores que participaron con mas de 14
+b)informar los codigos de los 2 jugadores con menor calificaion promedio en los partidos en los que participo. 
+Solo deben considerarse los jugadores que participaron con mas de 14
 fechas
 
-c)implementar e invocar a un modulo que genere una lista con los jugadores cuyo codigo possee exactmente 3 digitos impares y haya nacido entre 1983 y 1990. La lista debe estar 
+c)implementar e invocar a un modulo que genere una lista con los jugadores cuyo codigo possee
+exactmente 3 digitos impares y haya nacido entre 1983 y 1990. La lista debe estar 
 ordenada por codigo de jugador}
 program ndias;
 const
