@@ -1,5 +1,7 @@
-{un restaurante necesita un programa para administar la informacion de los platos que ofrece. Se dispone de una estrucutra con la informacion de los platos. De cada plato
-se conoce: nombre, precio, categoria(1:entrada, 2:principal, 3:postre, 4:minuta), cantidad de ingrediente y nombre de cada uno de los ingredientes(a lo sumo 10).
+{un restaurante necesita un programa para administar la informacion de los platos que ofrece. 
+Se dispone de una estrucutra con la informacion de los platos. De cada plato
+se conoce: nombre, precio, categoria(1:entrada, 2:principal, 3:postre, 4:minuta), cantidad de ingrediente y
+nombre de cada uno de los ingredientes(a lo sumo 10).
 A) generar una nueva estructura con nombre y precio de cada plato que psea perejil entre sus ingredientes
 B)informar las dos categorias con mayor cantidad de platos ofrecidos
 C)informar el precio promedio de los platos con mas de 5 ingredientes.}
