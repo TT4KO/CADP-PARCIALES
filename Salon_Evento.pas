@@ -1,7 +1,10 @@
-{Un salon de eventos necesita un programa para administrar la informacion de las reservas de diciembre de 2023. Se dispone de una estruicutra con la informacion de las reservas.
-De cada reserva se conoce: numero de reserva, DNI del cliente, dia del evento(1..31), hora de inicio, hora de fin  y categoria de serivicio (1..4). Ademas, se dispone de una tabla
+{Un salon de eventos necesita un programa para administrar la informacion de las reservas de diciembre de 2023. 
+Se dispone de una estruicutra con la informacion de las reservas.
+De cada reserva se conoce: numero de reserva, DNI del cliente, dia del evento(1..31), hora de inicio, 
+hora de fin  y categoria de serivicio (1..4). Ademas, se dispone de una tabla
 co el precio por hora de reserva de acuerdo a cada categoria de servicio.
-A)generar una nueva estructura con numero y precio total de acada reserva. Esta estrucuta debe generar ordenada por el precio total de cada reserva.
+A)generar una nueva estructura con numero y precio total de acada reserva. Esta estrucuta debe generar ordenada
+por el precio total de cada reserva.
 B)Informar los dias del mes con menor cantidad de reservas de clientes con DNI impar.
 C)Informar el porcentaje de reservas de eventos que inicien despues de las 12 hs y se produzcan en la segunda quincena}
 
