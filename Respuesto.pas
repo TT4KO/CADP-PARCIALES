@@ -1,8 +1,10 @@
-{un fabricante de dispositivos electronicos desea processar informacion de los respuestos que compro. De cada respuesto conoce su codigo, precio, 
-codigo de marca(entre 1 y 130) y nombre del pais del que proviene. El fabricante dispone de una estructura de datos con la informacion de los respuesto,
+{un fabricante de dispositivos electronicos desea processar informacion de los respuestos que compro.
+De cada respuesto conoce su codigo, precio, 
+codigo de marca(entre 1 y 130) y nombre del pais del que proviene. 
+El fabricante dispone de una estructura de datos con la informacion de los respuesto,
 ordenados por nombre del pais.
-A)Lea el codigo y el nombre de las 130 marcas con las que trabaja, y las almacene en una estrucuta de datos. La informacion se ingre sin ningun orden 
-en particular.
+A)Lea el codigo y el nombre de las 130 marcas con las que trabaja, y las almacene en una estrucuta de datos. 
+La informacion se ingre sin ningun orden en particular.
 B)Una vez completada la carga, procese la informacion edlos resputso e informe:
     1)La cantidad de paises a los que se le compro mas de 100 respuesto.
     2)Para cada marca, nombre d ela marca y el precio del prodducto mas barato.
