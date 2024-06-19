@@ -1,4 +1,5 @@
-{De cada viaje se conoce el codigo de tren, el mes en que se realizo el viaje(entre 1 y 12), la cantidad mde pasajeros que viajaron, y el codigo de la ciudad de destino(entre 1 y 20).
+{De cada viaje se conoce el codigo de tren, el mes en que se realizo el viaje(entre 1 y 12),
+la cantidad mde pasajeros que viajaron, y el codigo de la ciudad de destino(entre 1 y 20).
 La informacion se encuentre ordenada por codigo de tren.
 Ademas, la empresa dispone de una estructura de datfos con informacion del costo del ticket por ciudad destino.
 A)genere una lista que tenga por cada codigo del tren, la cantidad de viajes realizados.
