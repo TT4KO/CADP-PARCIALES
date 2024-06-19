@@ -1,4 +1,5 @@
-{de cada ticket se conoce el codigo del evento, deni del comprador, mes de la funcion (entre 1 y 12) y ubicacion(1:palco, 2: pullman, 3: platea alta, 4:platea baja) platea baja. 
+{de cada ticket se conoce el codigo del evento, deni del comprador, mes de la funcion (entre 1 y 12) y 
+ubicacion(1:palco, 2: pullman, 3: platea alta, 4:platea baja) platea baja. 
 La informacion se encuentra ordenada por codigo de evento.
 Ademas, la empresa dispone de una estructura de datos con informacion del costo del ticket por ubicacion
 A)genere una lista que tenga por cada codigo del evento, la cantidad de tickets vendidos
