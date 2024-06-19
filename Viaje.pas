@@ -1,134 +1,88 @@
 {para ellos se dispone de una estrcutura de datos con la informacion de todos los viajes realizados. De cada viaje se conoce el codigo de viaje, 
 el numero de coche(entre 1000 y 2500),
 el mes en que se realizo el viaje, cantidad de pasajes vendidos y el dni del chofer. La informacion nose encuentra ordenada por ningun criterio. 
+{para ellos se dispone de una estrcutura de datos con la informacion de todos los viajes reliazdos. De cada viaje se conoce el codigo de viaje,
+el numero de coche(entre 1000 y 2500),
+el mes en que se realizo el viaje, cantidad de pasajes vendidos y el dni del chofer. La informacion nose encuentra ordenada por ningun criterio. 
 Ademas, la empresa dispone 
 de una estructura de datos con informacion sobre la capacidad maximo de cada coche
 A)Informe le numero de coche con el cual se realizaron mas viajes.
-B)genera una lista con los viajes realizados en el mes 2 por un chofer con dni multiplo de 10, doinde la cantidad de pasajes vencidos no alcanza la capacidad 
-maxima del coche
+B)genera una lista con los viajes realizados en el mes 2 por un chofer con dni multiplo de 10, doinde la cantidad de pasajes vendidos no alcanza
+la capacidad maxima del coche
 C)para cada coche, iunforme el promedio de pasajeros que viajaron entre todos sus viajes.}
 
-program djais;
+program nodas;
+const
+
 type
+rangocoche = 1000..2500;
 viaje = record
-rangonumero = 1000...1500;
-codigo: integer;
-    numero: rangonumero;
+    codigo: integer;
+    coche: rangocoche;
     mes: integer;
     pasajes: integer;
     dni: integer;
-
 end;
-
 lista = ^nodo;
     nodo = record
     dato: viaje;
     sig: lista;
 end;
+vector = array [rangocoche] of integer;
 
-vector = array[rangonumero] of integer;
-
-procedure agregarAdelante(var L: lista; v: viaje);
-var
-  nue: lista;
-begin
-  new(nue);
-  nue^.dato:= d;
-  nue^.sig:= L2;
-  L2:= nue;
-end;
-
- function cumple(num: integer): boolean;
-begin
-  cumple := (num mod 10 = 0);
-end;
-
-procedure nuevalista(l: lista; var l2: lista; capacidadmaximo: vector2);
-var
-    v: viajes;
-begin
-    while(l <> nil) do
-    begin
-        if(l^.dato.mes = 2) and (cumple(l^.dato.dni)) and (l^.dato.pasajes < capacidadmaximo) then
-        adelante(l2, v);
-        l:=l^.sig;
-    end;
-end;
-
-procedure inicar(var vc: vector);
-var
-    i: rangonumero;
-begin
-    for i:=1000 to 2500
-    vc[i]:=0;
-end;
-
-procedure inicar(var vp: vector);
-var
-    i: rangonumero;
-begin
-    for i:=1000 to 2500
-    vp[i]:=0;
-end;
-
-procedure maximo(vc: vector; var cochemax, max: integer);
-var
-    i: rangonumero;
-begin
-    for i:= 1000 to 2500 do
-    begin
-        if(vc[i] > max) then
-        max:=vc[i];
-        cochemax:=i;
-    end;
-end;
-    
-procedure promedio(vp: vector; vc: integer);
-var
-    i: rangonumero;
-    suma: integer;
-begin
-    suma:= 0;
+procedure inicar(var v1, v2: vector);
+var 
+    i: rangocoche;
+begin   
     for i:=1000 to 2500 do
-    suma:= vp[i] / vc[i];
+    v1[i]:=0;
+    v2[i]:=0;
 end;
-    
 
+procedure maximo(vviajes: vectorcoche);
 var
-    i: rangonumero;
-    cant, suma: integer;
-
-procedure procesar(l: lista);
-var
-    vc, vp: vector;
-    
-    cochemax, max: integer;
-    prom: real;
+    viajemax, max: integer;   
+    i: rangocoche;
 begin
     max:=-1;
-    cochemax:=-1;
-    prom:=0;
-    inicar(vc);
-    iniciar2(vp);
+    for i:=1000 to 2500 do
+    if(vviajes[i] > max) then
+    max:=vviajes[i];
+    viajemax:=i;
+end;
+
+functio promedio(vaijes, vectorcoche);
+begin
+    promedio:=viajes/vectorcoche;
+end;
+
+procedure procesar(l: lista; var l2: lista; v: vector; var vectorcoche, vviajes: vector);
+var 
+    i: rangocoche;
+begin
+    iniciar(vectorcoche, vviajes);
     while(l <> nil) do
     begin
-        vc[l^.dato.numero]:=vc[l^.dato.numero] + 1;
-        vp[l^.dato.numero]:=vp[l^.dato.numero] + l^.dato.pasajes;
+        vviajes[l^.dato.coche]:=vviajes[l^.dato.coche] + 1;
         
+        vectorcoche[l^.dato.coche]:=vectorcoche[l^.dato.coche] + l^.dato.pasajes;
+        
+        if(l^.dato.mes = 2) and (l^.dato.dni mod 10 = 0) and (vectorcoche[l^.dato.coche] < v[l^.dato.coche]) then
+        adelante(l2, l^.dato);
         l:=l^.sig;
     end;
-    maximo(vc, cochemax, max);
-    promedio(vp, vc);
-end;   
+    maximo(vviajes);
+    for i:=1000 to 2500 do
+    promedio(vviajes[i], vectorcoche[i]);
+end;
 
 var
 l, l2: lista;
-capacidadmaximo: vector2
+v, vectorcoche, vviajes: vector;
 begin
     l:=nil;
     l2:=nil;
-    cargarviaje(l);{se dispone}
-    cargardatos(capacidadmaximo);{se dispone}
-    nuevalista(l, l2);
-    procesar(l);
+    cargarviaje(l);
+    cargarvector(v);
+    procesar(l, l2, v, vectorcoche, vviajes);
 end.
