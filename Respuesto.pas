@@ -1,4 +1,4 @@
-{un fabricante de dispositivos electronicos desea processar informacion de los respuestos que compro.
+{un fabricante de dispositivos electronicos desea procesar informacion de los respuestos que compro.
 De cada respuesto conoce su codigo, precio, 
 codigo de marca(entre 1 y 130) y nombre del pais del que proviene. 
 El fabricante dispone de una estructura de datos con la informacion de los respuesto,
@@ -7,7 +7,7 @@ A)Lea el codigo y el nombre de las 130 marcas con las que trabaja, y las almacen
 La informacion se ingre sin ningun orden en particular.
 B)Una vez completada la carga, procese la informacion edlos resputso e informe:
     1)La cantidad de paises a los que se le compro mas de 100 respuesto.
-    2)Para cada marca, nombre d ela marca y el precio del prodducto mas barato.
+    2)Para cada marca, nombre de la marca y el precio del prdducto mas barato.
     3)La cantidad de respuesto que no poseen ningun creo en su codigo.
 Implemente el programa principal que invoque a los modulos de los incisos a y b, e imprima los resultados.}
 
