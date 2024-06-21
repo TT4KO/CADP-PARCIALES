@@ -112,10 +112,10 @@ begin
          ordenada(l2, r);   
         
         if(digitos(l^.dato.dni)) then
-        vc[l^.dato.vmes]:=vc[l^.dato.mes] + 1;{b}
+        vc[l^.dato.dia]:=vc[l^.dato.dia] + 1;{b}
             
         totalreservas:=totalreservas + 1;{c}
-        if(l^.dato.horainicio > 12) and (vc[l^.dato.mes] > 15) then
+        if(l^.dato.horainicio > 12) and (vc[l^.dato.dia] > 15) then
         reservascondicion:=reservascondicion + 1;       
 
         l:=l^.sig;      
