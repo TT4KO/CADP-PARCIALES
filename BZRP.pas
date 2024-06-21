@@ -1,12 +1,11 @@
 {De casa session se lee: titulo de sesion, nombre del artista, 
 genero musical(1:trap, 2: reggaeton, 3:urban, 4:electronica, 5:pop rap)y cantidad de visualizaciones en youtube.
-la lectura finaliza cuando se lee la sesion del artista coin nombre "peso pluma", la cual debe proecsarse. 
-La informacion debe quedar almacenada en una estructura dwe datos 
-ordenada por titulo de eseion de forma ascendente.
+la lectura finaliza cuando se lee la sesion del artista con nombre "peso pluma", la cual debe procesarse. 
+La informacion debe quedar almacenada en una estructura de datos ordenada por titulo de sesion de forma ascendente.
 A)informar los dos codigos de genero musical con mayor cantidad de visualizaciones en youtube.
 B)informar la cantidad de sesiones del genero "reggaeton" cuya cantidad de visualizaciones 
 contiene la misma cantidad de digitos pares que impares
-c)Realiazr un modulo que reciba un titulo de sesion y elimine dicha sesion de la estructura. 
+c)Realiazar un modulo que reciba un titulo de sesion y elimine dicha sesion de la estructura. 
 El titulo de sesion puede no exisitr, Invocar el modulo desarrollado en el
 programa principal con un titulo leido por teclado.}
 
