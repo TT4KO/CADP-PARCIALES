@@ -1,12 +1,15 @@
-{un fabricante de dispositivos desea procesar informacion de respuesto que compro. El frabricante dispone de una estructura de datos con los nombres 
+{un fabricante de dispositivos desea procesar informacion de respuesto que compro. 
+El frabricante dispone de una estructura de datos con los nombres 
 de los 200 paises de los cuales provienen respuestos, en la que para cada codigo de pais(1..200) se tiene su nombre.
 Realizar un programa que:
-A. Lea la informacion de respuesto comprados y la almacene en una estructura de datos adecuada. De cada respuesto se lee codigo, precio y codigo del pais
-del que proviene(entre 1 y 200). La lactura finaliza al ingresar el codigo -1(que no debe procesarce);
-B.Una vez cargada la informacion, procese la estructura de datros del inciso a e informe.
-    1. Cantidad de paises para los que la cantidad de respuestos comprados es menor que el promedio de respuesto comprados a todos los paises.
-    2. Para cada pais, el nombre del pais y el precio del respuesto mas caro.
-    3. La cantidad de respuestos que poseen al menos 3 cereos en su codigo
+    A. Lea la informacion de respuesto comprados y la almacene en una estructura de datos adecuada. 
+        De cada respuesto se lee codigo, precio y codigo del pais del que proviene(entre 1 y 200).
+        La lactura finaliza al ingresar el codigo -1(que no debe procesarce);
+    B.Una vez cargada la informacion, procese la estructura de datros del inciso a e informe.
+        1. Cantidad de paises para los que la cantidad de respuestos comprados es menor que el promedio de respuesto 
+           comprados a todos los paises.
+        2. Para cada pais, el nombre del pais y el precio del respuesto mas caro.
+        3. La cantidad de respuestos que poseen al menos 3 cereos en su codigo
 Implemente el programa principal que invoque a los modulos de los incisos a y b, e informe los resultados.}
 
 program nodas;
