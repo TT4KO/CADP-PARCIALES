@@ -8,7 +8,7 @@ La informacion se ingresa sin ningun orden en particular.
 B)Una vez completada la carga, procese la informacion edlos resputso e informe:
     1)La cantidad de paises a los que se le compro mas de 100 respuesto.
     2)Para cada marca, nombre de la marca y el precio del prdducto mas barato.
-    3)La cantidad de respuesto que no poseen ningun creo en su codigo.
+    3)La cantidad de respuesto que no poseen ningun cero en su codigo.
 Implemente el programa principal que invoque a los modulos de los incisos a y b, e imprima los resultados.}
 
 program ndas;
