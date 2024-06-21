@@ -1,5 +1,5 @@
 {Un salon de eventos necesita un programa para administrar la informacion de las reservas de diciembre de 2023. 
-Se dispone de una estruicutra con la informacion de las reservas.
+Se dispone de una estrucutra con la informacion de las reservas.
 De cada reserva se conoce: numero de reserva, DNI del cliente, dia del evento(1..31), hora de inicio, 
 hora de fin  y categoria de serivicio (1..4). 
 Ademas, se dispone de una tabla con el precio por hora de reserva de acuerdo a cada categoria de servicio.
@@ -68,7 +68,7 @@ end;
 
 function promedio(a, b: integer):real;
 begin
-    promedio:=a/b;
+    promedio:=(a/100)*b;
 end;
 
 procedure insertarOrdenado(var L2: lista2; r:reserva2);
