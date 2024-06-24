@@ -2,10 +2,10 @@
 De cada viaje se conoce el codigo de viaje, el numero de coche(entre 1000 y 2500),el mes en que se realizo el viaje, 
 cantidad de pasajes vendidos y el dni del chofer. La informacion nose encuentra ordenada por ningun criterio. 
 Ademas, la empresa dispone de una estructura de datos con informacion sobre la capacidad maximo de cada coche
-A)Informe le numero de coche con el cual se realizaron mas viajes.
+A)Informe el numero de coche con el cual se realizaron mas viajes.
 B)genera una lista con los viajes realizados en el mes 2 por un chofer con dni multiplo de 10,
-doinde la cantidad de pasajes vendidos no alcanza la capacidad maxima del coche
-C)para cada coche, iunforme el promedio de pasajeros que viajaron entre todos sus viajes.}
+donde la cantidad de pasajes vendidos no alcanza la capacidad maxima del coche.
+C)para cada coche, informe el promedio de pasajeros que viajaron entre todos sus viajes.}
 
 program nodas;
 const
