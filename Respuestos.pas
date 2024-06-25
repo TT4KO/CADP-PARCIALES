@@ -108,6 +108,12 @@ begin
     sacarnueve:=cant9 = 3;
 end;
 
+procedure maximo(var max: real; precio: real)
+begin
+    if(precio > max) then
+    precio:=max;
+end;
+
 procedure procesar(vp: vectorpaises; var vm: vmonto; var vc: vcantidad; var cantidadtres: integer);
 var
     pais: string;
@@ -116,8 +122,8 @@ begin
     while(l <> nil) do
     begin
         vc[pais]:=vc[pais] + 1;
-        
-        vm[pais]:=vm[pais] + l^.dato.precio;
+
+        maximo(vm[pais], l^.dato.precio
         
         if(digitos(l^.dato.codigopais)) then
         cantidadtres:=cantidadtres + 1;
