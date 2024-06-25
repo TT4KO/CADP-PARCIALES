@@ -1,7 +1,10 @@
-{La panaderia agrupa a sus productos en 20 cateogrias(por ej: 1 pan; 2, medialuna; ect) De cada categoria se conoce: nombre y precio por kilo del
-producto. La panaderia dispone de la informacion de las categorias
-A) Realizar un modulo que retorne en una estructura de datos adecuada, la informacion de todas las compras efectuadas en el ultimo año. Dicha informacion
-se lee desde teclado, ordenada por DNI del cliente. De cada compra se lee: DNI del cliente, la categoria del producto(entre 1 y 20) y cantidad de kilos
+{La panaderia agrupa a sus productos en 20 cateogrias(por ej: 1 pan; 2, medialuna; ect) 
+De cada categoria se conoce: nombre y precio por kilo del producto. 
+La panaderia dispone de la informacion de las categorias
+A) Realizar un modulo que retorne en una estructura de datos adecuada, 
+la informacion de todas las compras efectuadas en el ultimo año. Dicha informacion
+se lee desde teclado, ordenada por DNI del cliente. 
+De cada compra se lee: DNI del cliente, la categoria del producto(entre 1 y 20) y cantidad de kilos
 comprados. La lectura finaliaz cuando se ingresa el DNI -1 (que debe procesarse)
 B)Realiar un modulo que reciba la informacion de las categorias t la de las todas las compras y retorne
     1. DNI del cliente que menos dinero ha gastado.
