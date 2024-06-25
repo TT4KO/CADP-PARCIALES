@@ -1,13 +1,13 @@
-{una tienda virtual necesita un programa para administar la informacion de sus clientes. de cada cliente se lee: numero, 
-dni, apellido y nombre, fecha de
-nacimiento(dia, mes y año), nivel(1..5) y puntaje. La lectura finaliza cuando se lee el cliente con DNI 444444, que debe
-procesarse.
+{una tienda virtual necesita un programa para administar la informacion de sus clientes. de cada cliente se lee: 
+numero, dni, apellido y nombre, fecha de nacimiento(dia, mes y año), nivel(1..5) y puntaje. 
+La lectura finaliza cuando se lee el cliente con DNI 444444, que debeprocesarse.
 Se pide:
-A)generar una estrucutra que contega numero, apellido y nombre de aquellos clientes con DNI compuesto solamente por digitos pares.
+A)generar una estrucutra que contega numero, apellido y nombre de aquellos clientes con DNI compuesto 
+  solamente por digitos pares.
 B)Informar los niveles con mayor y menor puntaje acumulado por los clientes nacidos despues del año 1990
-C)Implementar un modulo que elemine, de la estructura generada, la informacion relacionada  a un numero de cliebnte 
-recibido por parametro. Tener en cuenta que dicho numero
-puede no exisitr en la estructura.}
+C)Implementar un modulo que elimine, de la estructura generada, la informacion relacionada  a un numero de cliente 
+  recibido por parametro. Tener en cuenta que dicho numero
+  puede no exisitr en la estructura.}
 
 program parcial;
 const
