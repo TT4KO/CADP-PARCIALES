@@ -6,7 +6,7 @@ la informacion de todas las compras efectuadas en el ultimo año. Dicha informac
 se lee desde teclado, ordenada por DNI del cliente. 
 De cada compra se lee: DNI del cliente, la categoria del producto(entre 1 y 20) y cantidad de kilos
 comprados. La lectura finaliaz cuando se ingresa el DNI -1 (que debe procesarse)
-B)Realiar un modulo que reciba la informacion de las categorias t la de las todas las compras y retorne
+B)Realiar un modulo que reciba la informacion de las categorias y la de las todas las compras y retorne
     1. DNI del cliente que menos dinero ha gastado.
     2. Cantidad de compras por categoria.
     3. Cantidad total de compras de clientes con DNI compuesto por, a lo sumo, 5 digitos impares.}
