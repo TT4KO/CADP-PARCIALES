@@ -11,7 +11,7 @@ B)Una vez completada la carga, procese la informacion edlos resputso e informe:
     3)La cantidad de respuesto que no poseen ningun cero en su codigo.
 Implemente el programa principal que invoque a los modulos de los incisos a y b, e imprima los resultados.}
 
-program ndas;
+program jidas;
 const
 cantmarca = 130;
 type
@@ -22,33 +22,27 @@ respuesto = record
     marca: rangomarca;
     pais: string;
 end;
-
-vector = array [rangomarca] of string;
-vmoonto = array [rangomarca] of real;
-
 lista = ^nodo;
     nodo = record
     dato: respuesto;
     sig: lista;
 end;
 
-procedure leerrespuesto(var nombre: string; var codigo: integer);
-begin
-    read(nombre);
-    read(codigo);
-end;
+vectornombre = array [rangomarca] of string;
+vectorprecio = array [rangomarca] of real;
 
-procedurecargarinfo(v: vector);
+procedure cargarcosas(var v: vectornombre);
 var
-    i, cod: integer;
+    i: rangomarca;
+    codigo: integer;
     nombre: string;
 begin
     for i:=1 to cantmarca do
-    leerrespuesto(nombre, cod);
-    v[cod]:=nombre;
+    leer(codigo, nombre);
+    v[codigo]:=nombre;
 end;
-    
-function digitos(num, digitobuscado: integer):integer;
+
+function cumple(num, digitobuscado: integer):integer;
 var
     dig, cant: integer;
 begin   
@@ -60,67 +54,65 @@ begin
         cant:=cant + 1;
         num:= num div 10;
     end;
-    digitos:=(cant = 0);
-end;    
+    cumple:=(cant = 0);
+end;
 
-procedure minimo(vc: vmonto);
-var
-    marcamin, min, i: integer;
-begin
-    min:=9999;
+precedure iniciar(var vc: vectorprecio);
+var 
+    i: rangomarca;
+beign
     for i:=1 to cantmarca do
-    if(vc[i] > min) then
-        min:=vc[i];
-        marcamin:=i;
+    vc[i]:=0;
 end;
 
-procedure iniciar(var vc: vmonto);
-var
-    i: integer;
+procedure minimo(var marca: string; nuevovalor: integer);
 begin
-    for i := 1 to cantmarca do
-        vc[i] := 0;
+    if(nuevovalor > marca) then
+    marca:= nuevovalor;
 end;
 
-procedure procesar(l: lista; v: vector; var vc: vmonto);
+procedure procesar(l:lista; v: vectornombre; var vc: vectorprecio; var ninguncero, cantidadpaises: integer); 
 var
-    cantpaises: integer;
-    respuestos100: integer;
-    nombreactual: string;
-    cantceros: integer;
+    cantcompras: integer;
+    paisactual: string;
 begin
-    cantceros:=0;
-    respuestos100:=0;
     iniciar(vc);
+    cantidadpaises:=0;
+    ninguncero:=0;
     while(l <> nil) do
     begin
-        cantpaises:=0;
-        nombreactual:=l^.dato.pais;
-        while(l <> nil) and (l^.dato.pais = nombreactual) do
+        cantcompras:=0;
+        paisactual:=l^.dato.pais;
+        while(l <> nil) and (l^.dato.pais = paisactual) do
         begin
-            cantpaises:=cantpaises + 1;
+            cantidadpaises:=cantidadpaises + 1;
             
-            vc[l^.dato.marca]:=vc[l^.dato.marca] + l^.dato.precio;
+            minimo(vc[l^.dato.marca], l^.dato.precio)
             
-            if(digitos(l^.dato.codigo, 0 )= 0) then
-            cantceros:=cantceros + 1;
-            
+            if(cumple(l^.dato.codigo, 0))then
+            ninguncero:=ninguncero + 1;
+        
             l:=l^.sig;
         end;
-        if(cantpaises > 100) then
-        respuestos100:=respuestos100 + 1;
-        for i:= 1 to cantmarca do
-        minimo(vc);
+        if(cantcompras > 100) then
+        cantidadpaises:=cantidadpaises + 1;
     end;
 end;
+    
 
 var
 l: lista;
-v: vector;
-vc: vmonto;
+v: vectornombre;
+vc: vectorprecio;
+cantidadpaises: integer;
+ninguncero: integer;
 begin
     l:=nil;
-    cargarrespuesto(l);
-    procedurecargarinfo(v);
-    procesar(l, v, vc);
+    cargarrespuesto(l){se dispone}
+    cargarcosas(v);
+    procesar(v, l, vc, ninguncero, cantidadpaises);
+        write(ninguncero);
+        write(ninguncero);
+        for i:=1 to cantmarca do
+            write(v[i], vc[i]);
 end.
