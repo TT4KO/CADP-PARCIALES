@@ -1,8 +1,10 @@
 {
-A)De cada alumno se lee su dni, nombre y apellido, año de ingreso y nota obtenida(entre 0 y 10) en cada una de las 10 autoevaluaciones. En caso de no realizar
-  alguna autoevaluacion, se asigna la nota -1. La lectura finaliza cuando se ingresa el dni 44444444(que debe procesarse)
+A)De cada alumno se lee su dni, nombre y apellido, año de ingreso y nota obtenida(entre 0 y 10) 
+  en cada una de las 10 autoevaluaciones. En caso de no realizar alguna autoevaluacion, se asigna la nota -1. 
+  La lectura finaliza cuando se ingresa el dni 44444444(que debe procesarse).
 B)realizar un modulo que reciba la estructura de datos generada en el inciso anterior, e imprima en pantalla:
-    1)DNI de los alumnos que podran rendir el parcial de CADP. Para poder rendir, los alumnos deben haber realizado al menos 8 autoevaluaciones y deben haber
+    1)DNI de los alumnos que podran rendir el parcial de CADP.
+    Para poder rendir, los alumnos deben haber realizado al menos 8 autoevaluaciones y deben haber
     aprobado (nota 6 o superior) al menos 4 autoevaluaciones.
     2)El porcentaje de alumnos que hayan ingresado en el año 2020 y que se hayan presentado a todas las autoevaluaciones, sobre el total de alumnos.
     3)apellido y nombre de aquellos alumnos donde la suma de los digitos del DNI es par.}
