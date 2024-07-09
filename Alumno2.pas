@@ -1,7 +1,9 @@
-{Se dispone de un listado con todos los alumnos que ingresaron este año en la facultado. De cada alumno se concoe su dni, nombre y apellido,
-nota obtenida en curso de ingreso (entre 4 y 10), turno (entre 1 y 4) y si estuvo presente o ausente en cada una de las 12 clases de practica.
-A) Realizar un modulo que reciba la informacion de los alumnos y retorne una nueva estructura de datos que contenga solo aquellos alumnos que podran
-  rendir el parcial. Para poder rendir el parcial, los alumnos deben contar con al menos 8 aistencias en las 12 clases de practica
+{Se dispone de un listado con todos los alumnos que ingresaron este año en la facultado. De cada alumno se concoe su dni, 
+nombre y apellido, nota obtenida en curso de ingreso (entre 4 y 10), 
+turno (entre 1 y 4) y si estuvo presente o ausente en cada una de las 12 clases de practica.
+A) Realizar un modulo que reciba la informacion de los alumnos y retorne una nueva estructura de datos que contenga
+   solo aquellos alumnos que podran rendir el parcial. Para poder rendir el parcial, 
+   los alumnos deben contar con al menos 8 aistencias en las 12 clases de practica.
 B) Realizar un modulo que reciba la estructura de datos generada en el inciso anterior e imprima en pantalla
     1) Apellidos y nombre y el dni de los alumnos que hayan obtenido nota 8 o superior en el ingreso
     2) Turno con mayor cantidad de alumnos en condiciones de rendir el examen
