@@ -5,12 +5,10 @@ genero musical(1:trap latino, 2:reggaeton,
 La informacion no posee un orden especifico.
 A) informar los dos codigos de gnero musical menor cantida de reproducciones en spotify
 B)generara una lista ordenada por año que contenga las sesiones del genero "trap latino" y "urban" 
-cuya suma de los digitos de la cantidad de
-reproducciones sea multipolo de 5;
+  cuya suma de los digitos de la cantidad de
+  reproducciones sea multiplo de 5;
 C)realizar un modulo qu reciba la lista generada en el punto anterior e informe para cada año, la cantidad 
-de sesiones realizada junto al total
-de reproducciones de spotify de esas
-sesiones}
+  de sesiones realizada junto al total de reproducciones de spotify de esas sesiones}
 program djasi;
 type
 rangogenero = 1..5;
