@@ -123,7 +123,6 @@ begin
     iniciar(vc);
     septiembre := 0;
     totalSeptiembre := 0;
-
     while l <> nil do
     begin
         nombreactual := l^.dato.nombre;
@@ -131,8 +130,7 @@ begin
         while (l <> nil) and (l^.dato.nombre = nombreactual) do
         begin
             montototal := montototal + l^.dato.monto;
-            if montototal > 45000 then
-                writeln(nombreactual);
+          
                 
             vc[l^.dato.mes] := vc[l^.dato.mes] + 1;
                 
@@ -140,11 +138,12 @@ begin
             begin
                 totalSeptiembre := totalSeptiembre + l^.dato.monto;
                 septiembre := septiembre + 1;
+                 l := l^.sig;
             end;
-            l := l^.sig;
-        end;
+            if montototal > 45000 then
+            writeln(nombreactual);           
+        end;    
     end;
-
     minimo(vc, mesMin1, mesMin2);
     writeln('Los dos meses con menor cantidad de compras son: ', mesMin1, ' y ', mesMin2);
     writeln('Monto promedio de compras en septiembre: ', promedio(totalSeptiembre, septiembre):0:2);
