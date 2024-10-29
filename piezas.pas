@@ -1,5 +1,6 @@
 {Una fabrica de automóviles necesita un programa para administrar las piezas de los diferentes modelos de automóviles que fabrica.  De cada pieza se conoce: 
-ódigo de pieza, descripción, cantidad en stock, costo de la piza, código modelo al que pertenece(1 al 10), stock mínimo. La lectura finaliza al leer el código de pieza 9999 el cual debe procesarse.
+ódigo de pieza, descripción, cantidad en stock, costo de la piza, código modelo al que pertenece(1 al 10), stock mínimo. 
+La lectura finaliza al leer el código de pieza 9999 el cual debe procesarse.
 A. Leer y almacenar la información de la piezas en una estrucuta de datos adecuada. La información debe quedar almacenada en el mismo orden que fue leída.
 B. A partir de la estructura generada en A) calcular e informar.
 1. Los 2 códigos de modelo de automóviles mas baratos de fabricar
