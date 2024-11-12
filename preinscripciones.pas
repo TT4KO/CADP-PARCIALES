@@ -30,6 +30,16 @@ end;
 
 vector = array [rangohorario] of integer;
 
+procedure Adelante(var L: lista; a: alumno);
+var
+  nue: lista;
+begin
+  new(nue);
+  nue^.dato:= a;
+  nue^.sig:= L;
+  L:= nue;
+end;
+
 procedure nueva(l: lista; var l2: lista);
 begin
     while(l <> nil) do
