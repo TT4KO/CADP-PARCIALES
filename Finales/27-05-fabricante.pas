@@ -1,6 +1,8 @@
-{Una empresa dispone de una estructura de datos con información de los productos que vende. De cada producto conoce el código de producto, precio de venta, cantidad en stock y código de fabricante.
+{Una empresa dispone de una estructura de datos con información de los productos que vende. 
+De cada producto conoce el código de producto, precio de venta, cantidad en stock y código de fabricante.
 Cuando la empresa realiza una compra de productos, recibe del proveedor a quien le compró, 
-una estructura de datos con información de los productos comprados (código de producto, precio de venta, cantidad adquirida y código de fabricante), ordenada por código de fabricante.
+una estructura de datos con información de los productos comprados (código de producto, precio de venta, 
+cantidad adquirida y código de fabricante), ordenada por código de fabricante.
 Realizar un módulo que procese la información recibida de una compra, y actualice la estructura de datos de la empresa. 
  módulo debe retornar el porcentaje de productos comprados que aumentaron de precio, y la cantidad de productos comprados a cada fabricante. 
  Asuma que no se compran productos que no se encuentran previamente en la lista de productos de la empresa}
