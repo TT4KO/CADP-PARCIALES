@@ -14,7 +14,7 @@ end;
 
 vector = array [1..max] of cliente;
 
-4229 1259
+
 
 function escapi(num: integer): boolean;
 var
