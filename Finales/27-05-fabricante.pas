@@ -57,7 +57,7 @@ begin
 			if(l^.dato.precio < l2^.dato.precio2) then
 				aumentaron:=aumentaron + 1;
 				l^.dato.precio:= l2^.dato.precio2;
-				l^.dato.stock:=l2^.dato.precio2 + totalcomprados;
+				l^.dato.stock:=l2^.dato.cantidad + totalcomprados;
 			l:=l^.sig;
 		end;
 		write(cant);
