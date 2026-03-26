@@ -7,91 +7,81 @@ A) procese la informacion e informe para cada canasta basica de la familia el mo
 (esto se hace sumando el costo de cada item multiplicado por el valor de el peso de la categoria del item)
 B) Informe los codigos de categoria de los 15 items que representan el mayor gasto en esa canasta basica}
 
-program aski;
 const
-max = 300;
-top = 15;
+  maxCat = 300;
+  maxTop = 15;
+
 type
-rango = 1..max;
-items = record
-	codigo: rango;
-	precio: real;
-	dni: integer;
-end;
+  rango = 1..maxCat;
+  item = record
+    codigo: rango;
+    precio: real;
+    nombre: string;
+  end;
+  lista = ^nodo;
+  nodo = record
+    dato: item;
+    sig: lista;
+  end;
+  vectorPesos = array[rango] of real;
+  topItem = record
+    codigo: rango;
+    gasto: real;
+  end;
+  vectorTop = array[1..maxTop] of topItem;
 
-lista =  ^nodo;
-	nodo = record
-	dato: items;
-	sig: lista;
-end;
 
-vector = array [rango] of real;
-
-procedure insertar(var topgasto: array of real; topcod: array of integer; gasto:real; codigo: integer);
+procedure insertarTop(var v: vectorTop; var dimL: integer; cod: integer; gasto: real);
 var
-	i, j: integer;
+  i, pos: integer;
 begin
-	i:=1;
-	while(l <= top) do
-	begin
-		if(gasto > topgasto[i]) then
-		begin
-			for j:=top downto i+1 do
-			begin
-				topgasto[j]:=topgasto[j-1];
-				topcod[j]:=topcod[j-1];
-			end;
-		topgasto[i]:=gasto;
-		topcod[i]:=codigo;
-	end;
-	i:=i + 1;
-	end;
+  pos := 1;
+  while (pos <= dimL) and (v[pos].gasto > gasto) do
+    pos := pos + 1;
+  if pos <= maxTop then
+  begin
+    if dimL < maxTop then
+      dimL := dimL + 1;
+    for i := dimL downto pos + 1 do
+      v[i] := v[i-1];
+    v[pos].codigo := cod;
+    v[pos].gasto := gasto;
+  end;
 end;
 
-procedure procesar(l: lista; v: vector);
+procedure procesar(l: lista; v: vectorPesos);
 var
-	total: real;
-	gasto: real;
-	actual: integer;
-	topgasto: array[1..top] of real;
-	topcod: array [1..top] of integer;
-	i: integer;
+  actual: integer;
+  total: real;
+  gastoItem: real;
+  top: vectorTop;
+  dimTop, i: integer;
 begin
-	total:=0;
-	for i:=1 to top do
-	begin
-		topgasto[i]:=-1;
-		topcod[i]:=0;
-	end;
-	while(l <> nil) do
-	begin
-		gasto:=0;
-		actual:= l^.dato.codigo;
-		while(l <> nil) and (l^.dato.codigo = actual) do
-		begin
-			gasto:=gasto + l^.dato.precio * v[l^.dato.codigo];
-			
-			total:=total + gasto;
-			
-			insertar(topgasto, topcod, gasto, l^.dato.codigo);
-			
-			l:=l^.sig;
-		end;
-		write('el total es: ', total);
-		for i:=1 to top do
-		begin
-			writeln(i, topcod[i], topgasto[i]);
-		end;
-	end;
+  dimTop := 0;
+  while (l <> nil) do
+  begin
+    actual := l^.dato.codigo;
+    total := 0;
+    while (l <> nil) and (l^.dato.codigo = actual) do
+    begin
+      gastoItem := l^.dato.precio * v[l^.dato.codigo];
+      total := total + gastoItem;
+      insertarTop(top, dimTop, l^.dato.codigo, gastoItem);
+      l := l^.sig;
+    end;
+    writeln('Categoria: ', actual, ' Total: ', total:0:2);
+  end;
+  writeln('--- TOP 15 ---');
+  for i := 1 to dimTop do
+    writeln('Codigo: ', top[i].codigo, ' Gasto: ', top[i].gasto:0:2);
 end;
 
 var
-	l: lista;
-	v: vector;
+  l: lista;
+  v: vectorPesos;
 begin
-	l:=nil;
-	iniciar(v);{se dispone}
-	cargar(v);{se dispone}
-	agregar(l);{se dispone}
-	procesar(l, v);
+  l := nil;
+  iniciarVector(v);   {se dispone}
+  cargarLista(l);     {se dispone, ordenada por codigo}
+  procesar(l, v);
 end.
